@@ -5,9 +5,11 @@ import { faSearch, faFilm } from '@fortawesome/free-solid-svg-icons';
 import MovieComponent from "./components/MovieComponent";
 import MovieInfoComponent from "./components/MovieInfoComponent";
 
-export const API_KEY = "6c5d2628";
 
 function App() {
+  
+  const API_KEY = import.meta.env.VITE_REACT_APP_API_KEY;
+
   const [searchQuery, updateSearchQuery] = useState("");
   const [movieList, updateMovieList] = useState([]);
   const [selectedMovie, onMovieSelect] = useState();

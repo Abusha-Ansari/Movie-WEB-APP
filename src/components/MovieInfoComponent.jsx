@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from "react";
 import Axios from "axios";
-import { API_KEY } from "../App";
+
 
 const MovieInfoComponent = (props) => {
+
+  const API_KEY = import.meta.env.VITE_REACT_APP_API_KEY;
+  
   const [movieInfo, setMovieInfo] = useState();
   const { selectedMovie } = props;
 
